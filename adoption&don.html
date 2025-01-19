@@ -1,0 +1,118 @@
+<html lang="fr">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Processus d'adoption et Dons</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const toggles = document.querySelectorAll('.toggle-section');
+            toggles.forEach(toggle => {
+                toggle.addEventListener('click', function () {
+                    const content = this.nextElementSibling;
+                    const icon = this.querySelector('i');
+                    if (content.style.display === "none" || content.style.display === "") {
+                        content.style.display = "block";
+                        icon.classList.remove('fa-plus');
+                        icon.classList.add('fa-minus');
+                    } else {
+                        content.style.display = "none";
+                        icon.classList.remove('fa-minus');
+                        icon.classList.add('fa-plus');
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="navbar">
+        <img src="images/logo.png" alt="Pawfect Match Logo" class="h-12"/>
+        <ul>
+            <li>
+                <a href="index.html">Accueil</a>
+            </li>
+            <li>
+                <a href="about.html">À propos de nous</a>
+            </li>
+            <li>
+                <a href="animals list.html">Liste des animaux</a>
+            </li>
+            <li>
+                <a class="active" href="adoption&don.html">Processus d'adoption et dons</a>
+            </li>
+            <li>
+                <a href="contact.html">Contact</a>
+            </li>
+        </ul>
+        <button class="contact-btn">Contact us</button>
+    </div>
+    <main class="p-8">
+        <h1 class="text-3xl font-bold mb-4">Processus d'adoption et Dons</h1>
+        <section class="mb-8">
+            <h2 class="text-xl font-semibold mb-2">Comment Adopter</h2>
+            <p class="mb-4">Adopter un animal chez Pawfect Match est une expérience simple et gratifiante. Suivez ces étapes pour ramener chez vous votre nouveau compagnon à fourrure :</p>
+            <div class="space-y-8">
+                <div>
+                    <h3 class="text-lg font-semibold flex justify-between items-center cursor-pointer toggle-section">
+                        Parcourir les Animaux <i class="fas fa-plus"></i>
+                    </h3>
+                    <p style="display: none;">Consultez notre liste d'animaux disponibles et trouvez celui avec lequel vous vous connectez.</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold flex justify-between items-center cursor-pointer toggle-section">
+                        Soumettre une Candidature <i class="fas fa-plus"></i>
+                    </h3>
+                    <p style="display: none;">Remplissez notre formulaire de demande d'adoption pour exprimer votre intérêt.</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold flex justify-between items-center cursor-pointer toggle-section">
+                        Rencontre et Accueil <i class="fas fa-plus"></i>
+                    </h3>
+                    <p style="display: none;">Planifiez une visite pour rencontrer l'animal et voir si c'est un bon match.</p>
+                </div>
+            </div>
+        </section>
+        <section class="bg-yellow-500 p-16 text-white w-full">
+            <div class="space-y-8">
+                <div>
+                    <h3 class="text-lg font-semibold flex justify-between items-center cursor-pointer toggle-section">
+                        Vérification du Domicile <i class="fas fa-minus"></i>
+                    </h3>
+                    <p style="display: block;">Nous effectuerons une vérification du domicile pour garantir un environnement sûr pour l'animal.</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold flex justify-between items-center cursor-pointer toggle-section">
+                        Finaliser l'Adoption <i class="fas fa-minus"></i>
+                    </h3>
+                    <p style="display: block;">Complétez les papiers d'adoption et ramenez votre nouvel animal à la maison.</p>
+                </div>
+            </div>
+        </section>
+        <section class="flex flex-col md:flex-row items-center mt-8">
+            <div class="md:w-1/2 p-4">
+                <h2 class="text-xl font-semibold mb-4">Soutenez Notre Cause</h2>
+                <p class="mb-4">Vos généreux dons nous aident à fournir des soins et un abri aux animaux dans le besoin. Découvrez les différentes façons dont vous pouvez contribuer à Pawfect Match et faire une différence dans la vie de ces animaux.</p>
+                <ul class="list-disc list-inside">
+                    <li><strong>Don Unique :</strong> Faites une contribution unique pour soutenir notre mission.</li>
+                    <li><strong>Parrainage Mensuel :</strong> Devenez un parrain mensuel et apportez un soutien continu.</li>
+                    <li><strong>Dons en Nature :</strong> Faites don de fournitures telles que de la nourriture, des jouets et de la litière.</li>
+                </ul>
+            </div>
+            <div class="md:w-1/2 p-4">
+                <img alt="Person holding a happy puppy in a garden" height="400" src="https://storage.googleapis.com/a1aa/image/TWE6CGcLUJ7nO9YutD1NXe5MHUbkhTmCCN84491Ro3OgfuGUA.jpg" width="600"/>
+            </div>
+        </section>
+    </main>
+    <footer class="bg-yellow-500 p-4 text-center text-white">
+        <div class="space-x-4">
+            <a href="#">Mentions légales</a>
+            <a href="#">Politique de confidentialité</a>
+            <a href="#">Paramètres des cookies</a>
+        </div>
+    </footer>
+</body>
+</html>
